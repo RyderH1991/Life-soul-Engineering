@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Serif+TC:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gold: #C9A84C;
+  --gold2: #E8C96B;
+  --gold3: #8B6914;
+  --gold4: #FDF3DC;
+  --ink: #1a1a1a;
+  --ink2: #555;
+  --ink3: #999;
+  --sur: #fff;
+  --sur2: #f8f6f1;
+  --bdr: rgba(0,0,0,0.1);
+  --bdr2: rgba(0,0,0,0.18);
+  --r: 8px;
+  --rl: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f0ece4;
+    --ink2: #b0aa9e;
+    --ink3: #6e6860;
+    --sur: #1c1916;
+    --sur2: #242018;
+    --bdr: rgba(255,255,255,0.1);
+    --bdr2: rgba(255,255,255,0.18);
+    --gold4: #2a2110;
+  }
+}
+
+html, body {
+  background: var(--sur);
+  color: var(--ink);
+  font-family: 'Noto Serif TC', Georgia, serif;
+  min-height: 100vh;
+}
+
+button { cursor: pointer; }
+button:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
