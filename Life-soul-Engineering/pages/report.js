@@ -286,7 +286,7 @@ export default function Report() {
 
             <div style={{ border:'0.5px solid #C9A84C', borderRadius:'var(--border-radius-lg)', padding:'1.25rem', background:'#FDF3DC', marginBottom:'1rem' }}>
               <p style={{ fontSize:11, color:'#8B6914', marginBottom:'.6rem', fontFamily:"'Cinzel',serif", letterSpacing:'.04em' }}>步驟 1 · 完成付款</p>
-              <a href="https://your-payment-link.com" target="_blank" rel="noopener noreferrer" style={{ display:'block', textAlign:'center', padding:'.6rem', borderRadius:'var(--border-radius-md)', background:'#C9A84C', color:'#fff', fontSize:13, fontWeight:500, textDecoration:'none', fontFamily:"'Cinzel',serif", marginBottom:'.4rem' }}>前往付款 NT$360 →</a>
+              <a href="https://paypal.me/dianzhuh2019?country.x=TW&locale.x=zh_TW" target="_blank" rel="noopener noreferrer" style={{ display:'block', textAlign:'center', padding:'.6rem', borderRadius:'var(--border-radius-md)', background:'#C9A84C', color:'#fff', fontSize:13, fontWeight:500, textDecoration:'none', fontFamily:"'Cinzel',serif", marginBottom:'.4rem' }}>前往付款 NT$360 →</a>
               <p style={{ fontSize:11, color:'#8B6914', margin:0, textAlign:'center' }}>付款後你將收到解鎖碼</p>
             </div>
 
