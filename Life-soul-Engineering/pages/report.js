@@ -286,7 +286,102 @@ export default function Report() {
 
             <div style={{ border:'0.5px solid #C9A84C', borderRadius:'var(--border-radius-lg)', padding:'1.25rem', background:'#FDF3DC', marginBottom:'1rem' }}>
               <p style={{ fontSize:11, color:'#8B6914', marginBottom:'.6rem', fontFamily:"'Cinzel',serif", letterSpacing:'.04em' }}>步驟 1 · 完成付款</p>
-              <a href="https://paypal.me/dianzhuh2019?country.x=TW&locale.x=zh_TW" target="_blank" rel="noopener noreferrer" style={{ display:'block', textAlign:'center', padding:'.6rem', borderRadius:'var(--border-radius-md)', background:'#C9A84C', color:'#fff', fontSize:13, fontWeight:500, textDecoration:'none', fontFamily:"'Cinzel',serif", marginBottom:'.4rem' }}>前往付款 NT$360 →</a>
+              {/* ══ 付款方式 ══ */}
+<div style={{ display:'flex', flexDirection:'column', gap:'0.6rem', marginBottom:'0.4rem' }}>
+
+  {/* ① PayPal */}
+  <a href="https://paypal.me/dianzhuh2019?country.x=TW&locale.x=zh_TW"
+     target="_blank" rel="noopener noreferrer"
+     style={{
+       display:'flex', alignItems:'center', justifyContent:'center', gap:8,
+       padding:'.65rem', borderRadius:'var(--border-radius-md)',
+       background:'#003087', color:'#fff',
+       fontSize:13, fontWeight:600, textDecoration:'none'
+     }}>
+    💳 PayPal 付款 NT$360
+  </a>
+
+  {/* ② 中國信託銀行匯款 */}
+  <div style={{
+    border:'0.5px solid var(--color-border-tertiary)',
+    borderRadius:'var(--border-radius-md)',
+    overflow:'hidden'
+  }}>
+    <div style={{
+      background:'var(--color-background-secondary)',
+      padding:'0.55rem 1rem',
+      fontSize:12, fontWeight:600,
+      color:'var(--color-text-primary)',
+      borderBottom:'0.5px solid var(--color-border-tertiary)',
+      display:'flex', alignItems:'center', gap:6
+    }}>
+      🏦 銀行匯款（中國信託）
+    </div>
+    <div style={{
+      padding:'0.75rem 1rem',
+      fontSize:12, lineHeight:2,
+      color:'var(--color-text-primary)'
+    }}>
+      <div>銀行代碼｜<span style={{ color:'#C9A84C', fontWeight:500 }}>822</span></div>
+      <div>帳號｜<span style={{ color:'#C9A84C', fontWeight:500, letterSpacing:'0.08em' }}>190540112892</span></div>
+      <div>戶名｜<span style={{ color:'#C9A84C', fontWeight:500 }}>洪敏傑</span></div>
+      <div style={{
+        marginTop:'0.5rem', paddingTop:'0.5rem',
+        borderTop:'0.5px solid var(--color-border-tertiary)',
+        fontSize:11, color:'var(--color-text-tertiary)', lineHeight:1.7
+      }}>
+        匯款後請截圖傳至 LINE 或 Email 確認，我們將寄出解鎖碼。
+      </div>
+    </div>
+  </div>
+
+  {/* ③ 支付寶 */}
+  <div style={{
+    border:'0.5px solid var(--color-border-tertiary)',
+    borderRadius:'var(--border-radius-md)',
+    overflow:'hidden'
+  }}>
+    <div style={{
+      background:'var(--color-background-secondary)',
+      padding:'0.55rem 1rem',
+      fontSize:12, fontWeight:600,
+      color:'var(--color-text-primary)',
+      borderBottom:'0.5px solid var(--color-border-tertiary)',
+      display:'flex', alignItems:'center', gap:6
+    }}>
+      <span style={{ color:'#1677FF' }}>支</span> 支付寶付款
+    </div>
+    <div style={{
+      padding:'0.75rem 1rem',
+      display:'flex', flexDirection:'column', alignItems:'center', gap:8
+    }}>
+      <img
+        src="/alipay-qr.jpg"
+        alt="支付寶 QR Code"
+        style={{ width:160, height:160, borderRadius:8, border:'1px solid var(--color-border-tertiary)' }}
+      />
+      <p style={{ fontSize:11, color:'var(--color-text-tertiary)', margin:0, textAlign:'center' }}>
+        打開支付寶掃一掃，付款後截圖回傳確認
+      </p>
+    </div>
+  </div>
+
+  {/* ④ LINE Pay（申請中，上線後移除注解符號） */}
+  {/*
+  <a href="你的LINE Pay連結"
+     target="_blank" rel="noopener noreferrer"
+     style={{
+       display:'flex', alignItems:'center', justifyContent:'center', gap:8,
+       padding:'.65rem', borderRadius:'var(--border-radius-md)',
+       background:'#00B900', color:'#fff',
+       fontSize:13, fontWeight:600, textDecoration:'none'
+     }}>
+    💚 LINE Pay 付款 NT$360
+  </a>
+  */}
+
+</div>
+
               <p style={{ fontSize:11, color:'#8B6914', margin:0, textAlign:'center' }}>付款後你將收到解鎖碼</p>
             </div>
 
