@@ -286,101 +286,130 @@ export default function Report() {
 
             <div style={{ border:'0.5px solid #C9A84C', borderRadius:'var(--border-radius-lg)', padding:'1.25rem', background:'#FDF3DC', marginBottom:'1rem' }}>
               <p style={{ fontSize:11, color:'#8B6914', marginBottom:'.6rem', fontFamily:"'Cinzel',serif", letterSpacing:'.04em' }}>步驟 1 · 完成付款</p>
-              {/* ══ 付款方式 ══ */}
-<div style={{ display:'flex', flexDirection:'column', gap:'0.6rem', marginBottom:'0.4rem' }}>
+              {/* ══ 付款方式 ══ 取代原本的付款區塊 ══ */}
 
-  {/* ① PayPal */}
+{/* 付款按鈕群組 */}
+<div style={{ display:'flex', flexDirection:'column', gap:'0.5rem', marginBottom:'0.5rem' }}>
+
+  {/* PayPal */}
   <a href="https://paypal.me/dianzhuh2019?country.x=TW&locale.x=zh_TW"
      target="_blank" rel="noopener noreferrer"
      style={{
-       display:'flex', alignItems:'center', justifyContent:'center', gap:8,
-       padding:'.65rem', borderRadius:'var(--border-radius-md)',
+       display:'block', textAlign:'center',
+       padding:'0.75rem', borderRadius:'var(--border-radius-md)',
        background:'#003087', color:'#fff',
-       fontSize:13, fontWeight:600, textDecoration:'none'
+       fontSize:14, fontWeight:700, textDecoration:'none',
+       letterSpacing:'0.03em'
      }}>
     💳 PayPal 付款 NT$360
   </a>
 
-  {/* ② 中國信託銀行匯款 */}
-  <div style={{
-    border:'0.5px solid var(--color-border-tertiary)',
-    borderRadius:'var(--border-radius-md)',
-    overflow:'hidden'
-  }}>
-    <div style={{
-      background:'var(--color-background-secondary)',
-      padding:'0.55rem 1rem',
-      fontSize:12, fontWeight:600,
-      color:'var(--color-text-primary)',
-      borderBottom:'0.5px solid var(--color-border-tertiary)',
-      display:'flex', alignItems:'center', gap:6
+  {/* 銀行匯款 - 點擊展開 */}
+  <details style={{ borderRadius:'var(--border-radius-md)', overflow:'hidden' }}>
+    <summary style={{
+      display:'block', textAlign:'center',
+      padding:'0.75rem', cursor:'pointer',
+      background:'#1a1a2e', color:'#fff',
+      fontSize:14, fontWeight:700,
+      letterSpacing:'0.03em', listStyle:'none',
+      userSelect:'none'
     }}>
-      🏦 銀行匯款（中國信託）
-    </div>
+      🏦 銀行匯款 NT$360　▼
+    </summary>
     <div style={{
-      padding:'0.75rem 1rem',
-      fontSize:12, lineHeight:2,
-      color:'var(--color-text-primary)'
+      background:'#0f0f1a',
+      border:'1px solid #333',
+      borderTop:'none',
+      borderRadius:'0 0 var(--border-radius-md) var(--border-radius-md)',
+      padding:'1rem 1.25rem',
+      fontSize:13, lineHeight:2.2, color:'#eee'
     }}>
-      <div>銀行代碼｜<span style={{ color:'#C9A84C', fontWeight:500 }}>822</span></div>
-      <div>帳號｜<span style={{ color:'#C9A84C', fontWeight:500, letterSpacing:'0.08em' }}>190540112892</span></div>
-      <div>戶名｜<span style={{ color:'#C9A84C', fontWeight:500 }}>洪敏傑</span></div>
+      <div style={{ display:'flex', justifyContent:'space-between' }}>
+        <span style={{ color:'#888' }}>銀行</span>
+        <span style={{ color:'#C9A84C', fontWeight:600 }}>中國信託（822）</span>
+      </div>
+      <div style={{ display:'flex', justifyContent:'space-between' }}>
+        <span style={{ color:'#888' }}>帳號</span>
+        <span style={{ color:'#C9A84C', fontWeight:600, letterSpacing:'0.1em' }}>190540112892</span>
+      </div>
+      <div style={{ display:'flex', justifyContent:'space-between' }}>
+        <span style={{ color:'#888' }}>戶名</span>
+        <span style={{ color:'#C9A84C', fontWeight:600 }}>洪敏傑</span>
+      </div>
       <div style={{
-        marginTop:'0.5rem', paddingTop:'0.5rem',
-        borderTop:'0.5px solid var(--color-border-tertiary)',
-        fontSize:11, color:'var(--color-text-tertiary)', lineHeight:1.7
+        marginTop:'0.6rem', paddingTop:'0.6rem',
+        borderTop:'1px solid #333',
+        fontSize:11, color:'#888', lineHeight:1.8
       }}>
-        匯款後請截圖傳至 LINE 或 Email 確認，我們將寄出解鎖碼。
+        匯款後請截圖傳至 LINE 或 Email，確認後將寄出解鎖碼。
       </div>
     </div>
-  </div>
+  </details>
 
-  {/* ③ 支付寶 */}
-  <div style={{
-    border:'0.5px solid var(--color-border-tertiary)',
-    borderRadius:'var(--border-radius-md)',
-    overflow:'hidden'
-  }}>
-    <div style={{
-      background:'var(--color-background-secondary)',
-      padding:'0.55rem 1rem',
-      fontSize:12, fontWeight:600,
-      color:'var(--color-text-primary)',
-      borderBottom:'0.5px solid var(--color-border-tertiary)',
-      display:'flex', alignItems:'center', gap:6
+  {/* 支付寶 - 點擊展開 */}
+  <details style={{ borderRadius:'var(--border-radius-md)', overflow:'hidden' }}>
+    <summary style={{
+      display:'block', textAlign:'center',
+      padding:'0.75rem', cursor:'pointer',
+      background:'#1677FF', color:'#fff',
+      fontSize:14, fontWeight:700,
+      letterSpacing:'0.03em', listStyle:'none',
+      userSelect:'none'
     }}>
-      <span style={{ color:'#1677FF' }}>支</span> 支付寶付款
-    </div>
+      支 支付寶掃碼付款　▼
+    </summary>
     <div style={{
-      padding:'0.75rem 1rem',
-      display:'flex', flexDirection:'column', alignItems:'center', gap:8
+      background:'#0f0f1a',
+      border:'1px solid #333',
+      borderTop:'none',
+      borderRadius:'0 0 var(--border-radius-md) var(--border-radius-md)',
+      padding:'1rem',
+      display:'flex', flexDirection:'column', alignItems:'center', gap:'0.75rem'
     }}>
       <img
         src="/alipay-qr.jpg"
-        alt="支付寶 QR Code"
-        style={{ width:160, height:160, borderRadius:8, border:'1px solid var(--color-border-tertiary)' }}
+        alt="支付寶收款碼"
+        style={{
+          width:180, height:180,
+          borderRadius:8,
+          border:'2px solid #1677FF',
+          objectFit:'cover'
+        }}
       />
-      <p style={{ fontSize:11, color:'var(--color-text-tertiary)', margin:0, textAlign:'center' }}>
-        打開支付寶掃一掃，付款後截圖回傳確認
+      <p style={{ fontSize:12, color:'#aaa', margin:0, textAlign:'center' }}>
+        打開支付寶 → 掃一掃 → 付款後截圖回傳確認
       </p>
+    </div>
+  </details>
+
+  {/* LINE Pay - 申請中（不可點） */}
+  <div style={{
+    display:'flex', alignItems:'center', gap:'0.5rem'
+  }}>
+    <div style={{
+      flex:1, textAlign:'center',
+      padding:'0.75rem', borderRadius:'var(--border-radius-md)',
+      background:'#1a2e1a', color:'#666',
+      fontSize:14, fontWeight:700,
+      letterSpacing:'0.03em', cursor:'not-allowed'
+    }}>
+      💚 LINE Pay NT$360
+    </div>
+    <div style={{
+      flexShrink:0,
+      padding:'0.4rem 0.6rem',
+      borderRadius:'var(--border-radius-md)',
+      background:'#2a1a00', color:'#C9A84C',
+      fontSize:10, fontWeight:600,
+      border:'1px solid #C9A84C',
+      whiteSpace:'nowrap'
+    }}>
+      申請中
     </div>
   </div>
 
-  {/* ④ LINE Pay（申請中，上線後移除注解符號） */}
-  {/*
-  <a href="你的LINE Pay連結"
-     target="_blank" rel="noopener noreferrer"
-     style={{
-       display:'flex', alignItems:'center', justifyContent:'center', gap:8,
-       padding:'.65rem', borderRadius:'var(--border-radius-md)',
-       background:'#00B900', color:'#fff',
-       fontSize:13, fontWeight:600, textDecoration:'none'
-     }}>
-    💚 LINE Pay 付款 NT$360
-  </a>
-  */}
-
 </div>
+
 
               <p style={{ fontSize:11, color:'#8B6914', margin:0, textAlign:'center' }}>付款後你將收到解鎖碼</p>
             </div>
