@@ -367,7 +367,7 @@ export default function Report() {
       display:'flex', flexDirection:'column', alignItems:'center', gap:'0.75rem'
     }}>
       <img
-        src="/alipay-qr.jpg"
+        src="https://raw.githubusercontent.com/RyderH1991/Life-soul-Engineering/main/alipay-qr.jpg"
         alt="支付寶收款碼"
         style={{
           width:180, height:180,
