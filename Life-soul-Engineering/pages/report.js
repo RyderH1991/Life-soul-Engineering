@@ -68,6 +68,7 @@ export default function Report() {
     // 優先使用靜態報告
     if (STATIC_REPORTS && STATIC_REPORTS[d.mission]) {
       const newData = { ...d, report: STATIC_REPORTS[d.mission] }
+      fetch('/api/track-result',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mission:d.mission,direction:dir.name})}).catch(()=>{})
       setData(newData)
       sessionStorage.setItem('soulReport', JSON.stringify(newData))
       setGenerating(false)
