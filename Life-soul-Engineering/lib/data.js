@@ -1,16 +1,16 @@
 export const DIRS = [
   {
-    id: 1, icon: "🌾", name: "顯化創造者", bdgColor: "#7A6230", bdgBg: "#FDF3DC", bdgBorder: "#C9A84C",
+    id: 1, icon: "🌾", name: "顯化創造系列", bdgColor: "#7A6230", bdgBg: "#FDF3DC", bdgBorder: "#C9A84C",
     desc: "你天生擅長將內在渴望轉化為現實，在物質與能量的世界裡你是最有力的創造者。你的使命在於豐盛地活著，並帶動周圍的人體驗生命的充實。",
     missions: ["豐盛成就者","原力開拓者","秩序守護者","傳遞教育者","調度實踐者","指引啟蒙者","平衡締結者","和諧凝聚者"]
   },
   {
-    id: 2, icon: "🔥", name: "淬鍊蛻變者", bdgColor: "#7A3A22", bdgBg: "#FBF0EC", bdgBorder: "#D4876A",
+    id: 2, icon: "🔥", name: "淬鍊蛻變系列", bdgColor: "#7A3A22", bdgBg: "#FBF0EC", bdgBorder: "#D4876A",
     desc: "你的靈魂透過考驗而壯大，困境對你而言是最珍貴的禮物。你的使命是以自身蛻變，成為他人在黑暗中的燈塔。",
     missions: ["重塑改革者","冒險淬鍊者","凝靜觀察者","規律循環者","療育蛻變者","蟄伏策畫者","守護調節者","熱力表演者"]
   },
   {
-    id: 3, icon: "✨", name: "覺醒傳承者", bdgColor: "#185FA5", bdgBg: "#EBF3FB", bdgBorder: "#7AB5E8",
+    id: 3, icon: "✨", name: "覺醒傳承系列", bdgColor: "#185FA5", bdgBg: "#EBF3FB", bdgBorder: "#7AB5E8",
     desc: "你帶著宏觀視野來到這個時代，你的存在本身就是一份喚醒的力量。你的使命是留下影響深遠的智慧與連結。",
     missions: ["勝利領導者","孕育培養者","扶持協助者","人際整合者","直覺流動者","儲存傳承者","光之覺醒者","穩固建構者"]
   }
